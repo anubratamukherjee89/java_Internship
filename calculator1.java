@@ -46,7 +46,7 @@ public class calculator1 {
                 break;
             }
 
-            System.out.println(); // spacing
+            System.out.println(); 
         }
 
         sc.close();
