@@ -1,6 +1,5 @@
 import java.util.*;
 
-// Book Class
 class Book {
     private int id;
     private String title;
@@ -27,7 +26,6 @@ class Book {
     }
 }
 
-// User Class
 class User {
     private int userId;
     private String name;
@@ -45,7 +43,6 @@ class User {
     }
 }
 
-// Library Class
 class Library {
     private List<Book> books = new ArrayList<>();
     private Map<Integer, User> users = new HashMap<>();
@@ -100,7 +97,6 @@ class Library {
     }
 }
 
-// Main Class
 public class libraryManagementSystem {
     public static void main(String[] args) {
         Library library = new Library();
