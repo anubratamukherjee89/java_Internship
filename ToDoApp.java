@@ -17,25 +17,25 @@ public class ToDoApp {
         frame.setSize(400, 500);
         frame.setLayout(new BorderLayout());
 
-        // Title
+        
         JLabel title = new JLabel("My To-Do List", SwingConstants.CENTER);
         title.setFont(new Font("Arial", Font.BOLD, 20));
         frame.add(title, BorderLayout.NORTH);
 
-        // Task List
+        
         taskModel = new DefaultListModel<>();
         taskList = new JList<>(taskModel);
         JScrollPane scrollPane = new JScrollPane(taskList);
         frame.add(scrollPane, BorderLayout.CENTER);
 
-        // Bottom panel for input and buttons
+        
         JPanel bottomPanel = new JPanel();
         bottomPanel.setLayout(new BorderLayout());
 
         taskInput = new JTextField();
         bottomPanel.add(taskInput, BorderLayout.CENTER);
 
-        // Add and Delete buttons
+        
         JPanel buttonPanel = new JPanel();
         addButton = new JButton("Add");
         deleteButton = new JButton("Delete");
@@ -45,7 +45,7 @@ public class ToDoApp {
         bottomPanel.add(buttonPanel, BorderLayout.EAST);
         frame.add(bottomPanel, BorderLayout.SOUTH);
 
-        // Add task
+        
         addButton.addActionListener(e -> {
             String task = taskInput.getText().trim();
             if (!task.isEmpty()) {
@@ -54,7 +54,7 @@ public class ToDoApp {
             }
         });
 
-        // Delete selected task
+        
         deleteButton.addActionListener(e -> {
             int selectedIndex = taskList.getSelectedIndex();
             if (selectedIndex != -1) {
