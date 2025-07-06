@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-// Class to represent a quiz question
 class Question {
     String questionText;
     String[] options;
@@ -26,14 +25,12 @@ class Question {
     }
 }
 
-// Main class to run the quiz
 public class onlineQuizApp {
     public static void main(String[] args) {
         List<Question> questions = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         int score = 0;
 
-        // Sample questions
         questions.add(new Question("What is the capital of India?",
                 new String[]{"Mumbai", "Delhi", "Kolkata", "Chennai"}, 1));
 
@@ -46,7 +43,6 @@ public class onlineQuizApp {
         questions.add(new Question("What is the value of 7 * 6?",
                 new String[]{"42", "36", "48", "40"}, 0));
 
-        // Quiz loop
         for (int i = 0; i < questions.size(); i++) {
             Question q = questions.get(i);
             q.displayQuestion();
@@ -62,7 +58,6 @@ public class onlineQuizApp {
             }
         }
 
-        // Final score
         System.out.println("\n🎯 Quiz Completed!");
         System.out.println("Your Score: " + score + "/" + questions.size());
         scanner.close();
